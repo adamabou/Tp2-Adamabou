@@ -1,21 +1,21 @@
 package org.example.tp2adam.service;
 
 import jakarta.transaction.Transactional;
-import ma.chaimae.tp2app.entities.Consultation;
-import ma.chaimae.tp2app.entities.Medecin;
-import ma.chaimae.tp2app.entities.Patient;
-import ma.chaimae.tp2app.entities.RendezVous;
-import ma.chaimae.tp2app.repository.ConsultationRepository;
-import ma.chaimae.tp2app.repository.MedecinRepository;
-import ma.chaimae.tp2app.repository.PatientRepository;
-import ma.chaimae.tp2app.repository.RendezVousRepository;
+import org.example.tp2adam.entities.Consultation;
+import org.example.tp2adam.entities.Medecin;
+import org.example.tp2adam.entities.Patient;
+import org.example.tp2adam.entities.RendezVous;
+import org.example.tp2adam.repository.ConsultationRepository;
+import org.example.tp2adam.repository.MedecinRepository;
+import org.example.tp2adam.repository.PatientRepository;
+import org.example.tp2adam.repository.RendezVousRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
 
 @Service
 @Transactional
-public class HospitalServiceImpl implements IHospitalService {
+public  class HospitalServiceImpl implements IHospitalService{
+
 
     private PatientRepository patientRepository;
     private MedecinRepository medecinRepository;
@@ -30,6 +30,11 @@ public class HospitalServiceImpl implements IHospitalService {
     }
 
     @Override
+    public Consultation saveConsultation(Consultation consultation) {
+        return null;
+    }
+
+    @Override
     public Patient savePatient(Patient patient) {
 
         return patientRepository.save(patient);
@@ -37,18 +42,17 @@ public class HospitalServiceImpl implements IHospitalService {
 
     @Override
     public Medecin saveMedecin(Medecin medecin) {
-
         return medecinRepository.save(medecin);
+       
     }
 
     @Override
     public RendezVous saveRDV(RendezVous rendezVous) {
-        rendezVous.setId(UUID.randomUUID().toString());
-        return rendezVousRepository.save(rendezVous);
+        return null;
     }
 
-    @Override
-    public Consultation saveConsultation(Consultation consultation) {
+    public Consultation HospitalServiceImpl(Consultation consultation) {
         return consultationRepository.save(consultation);
+
     }
 }

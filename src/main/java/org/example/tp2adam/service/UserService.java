@@ -1,7 +1,7 @@
 package org.example.tp2adam.service;
 
-import ma.chaimae.tp2app.entities.Role;
-import ma.chaimae.tp2app.entities.User;
+import org.example.tp2adam.entities.Role;
+import org.example.tp2adam.entities.User;
 import org.example.tp2adam.entities.User;
 
 public interface UserService {

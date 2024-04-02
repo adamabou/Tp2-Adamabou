@@ -1,9 +1,10 @@
 package org.example.tp2adam.service;
 
-import ma.chaimae.tp2app.entities.Consultation;
-import ma.chaimae.tp2app.entities.Medecin;
-import ma.chaimae.tp2app.entities.Patient;
-import ma.chaimae.tp2app.entities.RendezVous;
+
+import org.example.tp2adam.entities.Medecin;
+import org.example.tp2adam.entities.Patient;
+import org.example.tp2adam.entities.RendezVous;
+import org.example.tp2adam.entities.Consultation;
 
 public interface IHospitalService {
     Patient savePatient(Patient patient);
